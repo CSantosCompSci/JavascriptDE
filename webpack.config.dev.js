@@ -1,5 +1,5 @@
-import webpack from webpack;
-import path from path;
+import webpack from 'webpack';
+import path from 'path';
 
 export default{
 	debug:true,
@@ -11,13 +11,13 @@ export default{
 	target: 'web',
 	output: {
 		path: path.resolve(__dirname, 'src'),
-		publicPathL '/',
+		publicPath: '/',
 		filename: 'bundle.js'
 	},
 	plugins:[],
 	module:{
-		loaders:{
-			{test: /\.js$, exclude: /node_modules/, loaders:['babel']},
+		loaders:[
+			{test: /\.js$/, exclude: /node_modules/, loaders:['babel']},
 			{test:/\.css$/, loaders:['style', 'css']}
 		]
 
